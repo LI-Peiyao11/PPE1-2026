@@ -1,0 +1,3 @@
+# Pipelines : mise en pratique
+# Les données sont incluses dans data/
+ANN_DIR="./data/ann"
