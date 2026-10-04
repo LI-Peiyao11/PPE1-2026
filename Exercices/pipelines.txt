@@ -1,3 +1,19 @@
-# Pipelines : mise en pratique
-# Les données sont incluses dans data/
-ANN_DIR="./data/ann"
+# Exercice 1.a — Comptage des annotations par année
+echo "Annotations en 2016 :" > Exercices/comptes.txt
+cat data/ann/2016/*/*.ann | grep . | wc -l >> Exercices/comptes.txt
+
+echo "Annotations en 2017 :" >> Exercices/comptes.txt
+cat data/ann/2017/*/*.ann | grep . | wc -l >> Exercices/comptes.txt
+
+echo "Annotations en 2018 :" >> Exercices/comptes.txt
+cat data/ann/2018/*/*.ann | grep . | wc -l >> Exercices/comptes.txt
+
+# Exercice 1.b — Comptage des annotations Location par année
+echo "Locations en 2016 :" > Exercices/locations.txt
+cat data/ann/2016/*/*.ann | grep "Location" | wc -l >> Exercices/locations.txt
+
+echo "Locations en 2017 :" >> Exercices/locations.txt
+cat data/ann/2017/*/*.ann | grep "Location" | wc -l >> Exercices/locations.txt
+
+echo "Locations en 2018 :" >> Exercices/locations.txt
+cat data/ann/2018/*/*.ann | grep "Location" | wc -l >> Exercices/locations.txt
