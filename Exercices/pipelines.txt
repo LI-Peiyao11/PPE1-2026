@@ -17,3 +17,13 @@ cat data/ann/2017/*/*.ann | grep "Location" | wc -l >> Exercices/locations.txt
 
 echo "Locations en 2018 :" >> Exercices/locations.txt
 cat data/ann/2018/*/*.ann | grep "Location" | wc -l >> Exercices/locations.txt
+
+# Exercice 2.a — Les 15 lieux les plus cités par année
+cat data/ann/2016/*/*.ann | grep "Location" | cut -f 3 | sort | uniq -c | sort -n | tail -n 15 > Exercices/classement_2016.txt
+
+cat data/ann/2017/*/*.ann | grep "Location" | cut -f 3 | sort | uniq -c | sort -n | tail -n 15 > Exercices/classement_2017.txt
+
+cat data/ann/2018/*/*.ann | grep "Location" | cut -f 3 | sort | uniq -c | sort -n | tail -n 15 > Exercices/classement_2018.txt
+
+# Exercice 2.b — Les 15 lieux les plus cités en mars, toutes années confondues
+cat data/ann/*/03/*.ann | grep "Location" | cut -f 3 | sort | uniq -c | sort -n | tail -n 15 > Exercices/classement_mois_03.txt
